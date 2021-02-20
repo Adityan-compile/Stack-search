@@ -1,14 +1,16 @@
 {
 	"name": "stack-search",
 	"displayName": "Stack-Search",
-	"description": "Search Stack Overflow right from VS CODE and view the article in your browser",
+	"description": "Search Stack Overflow right from Visual Studio Code and view the question in your browser",
 	"version": "0.0.1",
+	"publisher": "Adityan.P",
 	"engines": {
 		"vscode": "^1.53.0"
 	},
 	"categories": [
 		"Other"
 	],
+	"icon": "https://i.postimg.cc/G2749nhR/screenshot.png",
 	"activationEvents": [
 		"onCommand:stack-search.stackSearch"
 	],
@@ -17,7 +19,7 @@
 		"commands": [
 			{
 				"command": "stack-search.stackSearch",
-				"title": "Stack search"
+				"title": "Stack Search"
 			}
 		]
 	},
@@ -38,7 +40,11 @@
 		"vscode-test": "^1.5.0"
 	},
 	"dependencies": {
-		"axios": "^0.21.1",
-		"fast-xml-parser": "^3.18.0"
-	}
+		"axios": "^0.21.1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Adityan-compile/Stack-search.git"
+	  },
+	  "homepage": "https://github.com/Adityan-compile/Stack-search"
 }

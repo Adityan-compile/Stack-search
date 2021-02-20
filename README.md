@@ -1,65 +1,29 @@
-# stack-search README
+# Stack Search 
 
-This is the README for your extension "stack-search". After writing up a brief description, we recommend including the following sections.
+Search for stack overflow questions directly from Visual Studio Code.
+
+[![screenshot.png](https://i.postimg.cc/G2749nhR/screenshot.png)](https://postimg.cc/5Yz4kGCK)
+
 
 ## Features
+- Search for stack overflow questions right from Visual Studio Code.
+- Open interesting questions from your browser.
+- Automatically sorts questions based on votes.
+- Only displays answered questions.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+## Usage
+- Open Command Palette using ```ctrl+shift+p```.
+- Type in ```Stack Search``` and hit Enter.
+- A text box will appear search for your question.
+- A click on the question to view in browser.
 
 ## Known Issues
+- Search can take longer on slower internet connections
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+## Dependencies
+- Axios
 
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+## License
+```
+GNU GPL(gplv3)
+```

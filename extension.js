@@ -1,40 +1,49 @@
-const vscode = require('vscode');
-const axios = require('axios');
-const fastXml = require('fast-xml-parser');
-
+const vscode = require("vscode");
+const axios = require("axios");
 
 /**
  * @param {vscode.ExtensionContext} context
  */
+
+var baseUrl =
+  "https://api.stackexchange.com/search/advanced?answered=true&sort=votes&site=stackoverflow.com&q=";
+
 async function activate(context) {
-    let url = "https://stackoverflow.com/feeds"; 
+  let disposable = await vscode.commands.registerCommand(
+    "stack-search.stackSearch",
+    async function () {
+      var query = await vscode.window.showInputBox({
+        placeHolder: "Search Stackoverflow",
+      });
 
-    let res = await axios.get(url);
-	console.log(fastXml.parse(res.data));
-    let questions = await fastXml.parse(res.data).feed.entry.map(entry =>{
-		return{
-			label: entry.title,
-			link: entry.id
-		}
-	});
-     
-	console.log(questions);
-
-	let disposable = vscode.commands.registerCommand('stack-search.stackSearch', async function () {
-		let article = await vscode.window.showQuickPick(questions);
-		if(article == null){
-			return
-		}else{
-			vscode.env.openExternal(article.link);
-		}
-	});
-
-	context.subscriptions.push(disposable);
+      if (query === undefined || query === null) {
+        return;
+      } else {
+        await axios.get(baseUrl + query).then(async (res) => {
+          var question = await vscode.window.showQuickPick(
+            res.data.items.map((entry) => {
+              return {
+                label: entry.title.replace("&#39;", "'"),
+                link: entry.link,
+              };
+            })
+          );
+          console.log(question);
+          if (question === null) {
+            return;
+          } else {
+            vscode.env.openExternal(question.link);
+          }
+        });
+      }
+    }
+  );
+  context.subscriptions.push(disposable);
 }
 
 function deactivate() {}
 
 module.exports = {
-	activate,
-	deactivate
-}
+  activate,
+  deactivate,
+};
