@@ -10,7 +10,7 @@
 	"categories": [
 		"Other"
 	],
-	"icon": "https://i.postimg.cc/G2749nhR/screenshot.png",
+	"icon": "assets/icon.png",
 	"activationEvents": [
 		"onCommand:stack-search.stackSearch"
 	],
