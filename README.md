@@ -23,6 +23,9 @@ Search for stack overflow questions directly from Visual Studio Code.
 ## Dependencies
 - Axios
 
+## Requirements
+- Visual Studio Code > 1.53.2
+
 ## License
 ```
 GNU GPL(gplv3)
