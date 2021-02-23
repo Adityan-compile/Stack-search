@@ -1,9 +1,9 @@
 # Change Log
 
-All notable changes to the "stack-search" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
 ## [Unreleased]
 
+
+## [Released]
 - Initial release
+- Version 0.0.2(Add requirements section in README.md)
+- Version 0.2.1(Fix error on no question selected)

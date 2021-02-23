@@ -23,13 +23,13 @@ async function activate(context) {
           var question = await vscode.window.showQuickPick(
             res.data.items.map((entry) => {
               return {
-                label: entry.title.replace("&#39;", "'"),
+                label: entry.title.replace("&#39;", "'").replace("&quot;", "\""),
                 link: entry.link,
               };
             })
           );
-          console.log(question);
-          if (question === null) {
+          if (question === undefined) {
+            vscode.window.showInformationMessage("No question selected");
             return;
           } else {
             vscode.env.openExternal(question.link);

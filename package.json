@@ -2,7 +2,7 @@
 	"name": "stack-search",
 	"displayName": "Stack-Search",
 	"description": "Search Stack Overflow right from Visual Studio Code and view the question in your browser",
-	"version": "0.0.2",
+	"version": "0.2.1",
 	"publisher": "AdityanP",
 	"engines": {
 		"vscode": "^1.53.0"
